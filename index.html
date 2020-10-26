@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>บันทึกวันนัดหมาย</title>
+  <meta charset="utf-8" />
+    <title>DateTimePicker example</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+    <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+    <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container"></div>
+    <h2 align="left">บันทึกวันนัดหมาย</h2>
+
+    <form id="addForm">
+  
+
+    <div class="form-group">
+      <label class="control-label col-sm-4 requiredField">ชื่อคลินิก
+     <!-- <input type="text" name="name" placeholder="ชื่อคลินิก" class="form-control"> -->
+     <select type="text" name="name"  class="form-control">
+        <option>อิงมอคลินิก</option>
+        <option>TDpetclinic</option>
+        <option>โรงพยาบาลสัตว์กิตติคุณสัตว์</option>
+        <option>คลินิกคนรักสัตว์</option>
+        <option>โรงพยาบาลสัตว์ลิตเติ้ลเหมียว</option>
+        <option>คลินิกรักษาสัตว์บัดดี้</option>
+        <option>คลินิกบุญญเกียรติสัตวเเพทย์</option>
+        <option>โรงพยาบาลสัตว์พิษณุโลก</option>
+        <option>เจ้าตัวน้อย คลินิกรักษาสัตว์</option>
+        <option>โรงพยาบาลสัตว์ สถานีรักษาสัตว์</option>
+        <option>คลินิกสัตว์เลี้ยงต้นรักษ์</option>
+        <option>คลินิกรักษาสัตว์วีไอพี</option>
+      </select>
+    </label>
+     </div>
+
+     <div class="form-group">
+        <label class="control-label col-sm-4 requiredField" for="date">นัดหมาย
+       <!-- <input type="text" name="appoint" placeholder="นัดหมาย" class="form-control"> -->
+       <select type="text" name="appoint"  class="form-control">
+        <option>นัดพบแพทย์</option>
+        <option>ฉีควัคซีน</option>
+        <option>ตัดขน</option>
+      </select>
+    </label>
+       </div>
+
+       <div class="form-group">
+        <label class="control-label col-sm-4 requiredField" for="date">บันทึกอื่นๆ
+       <input type="text" name="save" placeholder="บันทึกอื่นๆ" class="form-control">
+       </label>
+       </div>
+
+       <div class="form-group">
+        <label class="control-label col-sm-2 requiredField" for="date">
+          วัน/เดือน/ปี
+         <span class="asteriskField">
+          *
+         </span>
+         <input type="text" name="date" id="datepicker" width="312" />
+         <script>
+              $('#datepicker').datepicker();
+         </script>
+        
+        </label>
+       </div>
+
+       <div class="form-group">
+        <label class="control-label col-sm-2 requiredField" for="date">เวลา
+        <span class="asteriskField">
+            *
+           </span>
+        <input type="text" name="time" id="timepicker" width="276" />
+        <script>
+            $('#timepicker').timepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+        </label>
+       </div>
+
+    <div class="form-group">
+        <div class="col-2">
+        <button type="submit" class="btn btn-primary btn-md rounded-10" >บันทึก</button>
+        </div>
+    </div>
+
+    </form>
+    <div class="form-group">
+        <div class="col-2">
+          <p><a href="https://linechatbot002.github.io/Cat-DogBot-1/index1?fbclid=IwAR37DXMmIsn0hgXculOKxMf2cmsRf_pEVA5XtVuwuO4Uu4lphcGPLgM8Og8" class="btn btn-primary btn-md rounded-10">ดูข้อมูล</a></p>
+        </div>
+      </div>
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAyOMLx_qKAUnjpkUIxhRQz8ebbetuJQ0Q",
+    authDomain: "cat-dog-bot-qxxm.firebaseapp.com",
+    databaseURL: "https://cat-dog-bot-qxxm.firebaseio.com",
+    projectId: "cat-dog-bot-qxxm",
+    storageBucket: "cat-dog-bot-qxxm.appspot.com",
+    messagingSenderId: "613072209022",
+    appId: "1:613072209022:web:7cac89cf0ec7e2b788842f",
+    measurementId: "G-TXLMEX3Q4T"
+  };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+</script>
+<script src="app.js"></script>
+</body>
+
+</html>
